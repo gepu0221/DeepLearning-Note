@@ -1,0 +1,6 @@
+Input W1*H1*D1
+Two hyperparameters:spaital extent F and stride S
+Output W2*H2*D2:
+W2=(W1-F)/S+1
+H2=(H1-F)/S+1
+D2=D1
