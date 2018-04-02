@@ -1,0 +1,13 @@
+1 INPUT[32*32*3]*filter[3*3*3]=feature map[(32-3+1)*(32-3+1)]=feature map[30*30]
+卷积操作是点乘相加，INPUT[width*height*depth/channel]
+                  filter[width_*height_*depth/channel]
+                  INPUT和filter中的depth相对应
+                  生成的feature map的个数与filter的个数相等
+2 Local Connectivity
+hyperparameters:receptive field(the filter size):每个神经元连接到输入变量的局部区域的空间范围。在卷积操作中，连接在空间上（沿着高度和宽度）是局部的，但始终沿着输入
+体积的整个深度。
+3 Spatial arrangement(Output volume)
+three hyperparameters:
+(1)depth:correspond to the number of filters(each learning to look for something different in the input)
+(2)stride
+(3)zero-padding:use it to preserve the spatial size fo the input volume so the input and output width and heigth are the same.
